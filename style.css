@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f5e6e6;
+}
+
+nav {
+    background: #97597d;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold; /* 讓導覽文字明顯一點 */
+}
+
+.container {
+    text-align: center;
+    color: #97597d;
+    max-width: 1800px; /* 限制最大寬度，避免在大螢幕上太散 */
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px; /* 稍微圓角更一致 */
+}
+
+.作品列 {
+    display: flex;
+    flex-wrap: wrap;    /* 讓卡片能自動換行 */
+    justify-content: center; /* 讓卡片在中間排列 */
+    gap: 30px;          /* 加大間距感 */
+    padding: 20px;
+}
+
+.card {
+    flex: 0 1 350px;    /* 基礎寬度 350px，會隨螢幕調整 */
+    background: #ffefef;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(44, 36, 36, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease; /* 加入平滑動畫時間 */
+}
+
+.card img {
+    width: 100%;
+    height: 300px;      /* 調整圖片高度，比例更協調 */
+    object-fit: cover;
+    display: block;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* 懸停效果優化 */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(151, 89, 125, 0.3); /* 陰影顏色與主題呼應 */
+}
+
+/* 讓關於我的 ul 標籤整體置中 */
+.container ul {
+    display: inline-block;  /* 讓 ul 寬度隨內容變化 */
+    text-align: left;       /* 讓清單內的文字恢復靠左對齊，比較美觀 */
+    padding-left: 20px;     /* 留出空間給小圓點 */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #97597d; /* 使用你的導覽列顏色 */
+    margin: 30px 0;
+    opacity: 0.3;
+}
+
+.container h3 {
+    margin-top: 20px;
+}
+
+.container img {
+    max-width: 100%;  /* 寬度最大就是容器的 100% */
+    display: block;   /* 消除圖片下方多餘間隙 */
+    margin: 20px auto; /* 居中 */
+    border-radius: 15px;
+}
